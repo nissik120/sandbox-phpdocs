@@ -16,6 +16,14 @@ concurrency:
     cancel-in-progress: false
 
 jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: List files
+              run:
+                pwd
+                ls
+
     deploy:
         environment:
             name: github-pages
