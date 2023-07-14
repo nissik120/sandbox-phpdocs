@@ -16,26 +16,26 @@ concurrency:
     cancel-in-progress: false
 
 jobs:
-    super-lint:
-      name: Lint code base
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v3
+    # super-lint:
+    #   name: Lint code base
+    #   runs-on: ubuntu-latest
+    #   steps:
+    #     - name: Checkout code
+    #       uses: actions/checkout@v3
         
-        - name: Run Super-Linter
-          uses: github/super-linter@v5
+    #     - name: Run Super-Linter
+    #       uses: github/super-linter@v5
 
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - name: List files
-              run:
-                pwd
-                ls
-            - name: Build PHP Documentation
-              run:
-                apt update && apt install wget -y
+    # build:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: List files
+    #           run:
+    #             pwd
+    #             ls
+    #         - name: Build PHP Documentation
+    #           run:
+    #             apt update && apt install wget -y
 
     deploy:
         environment:
